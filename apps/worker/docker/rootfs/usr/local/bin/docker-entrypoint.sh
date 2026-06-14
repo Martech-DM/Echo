@@ -4,11 +4,11 @@ set -eu
 
 WORKER_DIST_DIR="/app/apps/worker/dist"
 NODE_BIN="/usr/local/bin/node"
-# ALL_WORKERS="chat integration ai-agent default webhook trigger analytics schedule sequence-scheduler sequence-producer sequence-consumer"
-ALL_WORKERS="chat integration ai-agent default webhook trigger analytics schedule sequence-scheduler"
+# Keep this list aligned with apps/worker/tsdown.config.ts emitted entrypoints.
+ALL_WORKERS="chat integration ai-agent default webhook trigger schedule sequence-scheduler sequence-producer sequence-consumer events"
 
 print_usage() {
-    echo "Usage: ${0} worker [all|ai-agent|analytics|chat|default|integration|schedule|sequence-consumer|sequence-producer|sequence-scheduler|trigger|webhook]" >&2
+    echo "Usage: ${0} worker [all|ai-agent|chat|default|events|integration|schedule|sequence-consumer|sequence-producer|sequence-scheduler|trigger|webhook]" >&2
     echo "       ${0} {bash|sh}" >&2
 }
 
@@ -16,9 +16,6 @@ resolve_worker_script() {
   case "$1" in
     "ai-agent")
       echo "${WORKER_DIST_DIR}/ai-agent/worker.mjs"
-      ;;
-    "analytics")
-      echo "${WORKER_DIST_DIR}/analytics/worker.mjs"
       ;;
     "chat")
       echo "${WORKER_DIST_DIR}/chat/worker.mjs"
