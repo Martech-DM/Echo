@@ -1,0 +1,26 @@
+apps/worker/docker/rootfs/usr/local/bin/docker-entrypoint.sh
+  s_8cce6d4f017c98::t_3ad82816770273 7
+  s_8cce6d4f017c98::t_11e4480d21efce 8,11
+apps/builder/src/proxy.ts
+  s_8cce6d4f017c98::t_c2e80b0b62dcc9 23
+apps/builder/src/app/privacy-policy/page.tsx
+  s_8cce6d4f017c98::t_c2e80b0b62dcc9 1-87
+packages/database/drizzle/20260522000000_drop_organization_add_enterprise_tables/migration.sql
+  s_8cce6d4f017c98::t_3ad82816770273 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "49bff7124ea0342928e234b373ad63e418584544",
+  "prompts": {},
+  "sessions": {
+    "s_8cce6d4f017c98": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ec6b7-4349-7121-be94-11ec35df4ab9",
+        "model": "gpt-5.5"
+      },
+      "human_author": "William Rufino <williamhrs@gmail.com>"
+    }
+  }
+}
